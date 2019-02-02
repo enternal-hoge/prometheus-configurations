@@ -288,5 +288,5 @@ WantedBy=multi-user.target
 
 ## VM03
 
-Scope OUt.
+Scope Out.
 
