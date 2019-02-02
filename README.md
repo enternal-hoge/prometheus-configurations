@@ -70,7 +70,7 @@ scrape_configs:
         replacement: localhost:9101
 ```
 
-### Alert Ruleの設定
+### Alert Rule
 
 target file　:　/opt/prometheus/prometheus-2.3.2.linux-amd64/alert_rules.yml
 ```
@@ -156,7 +156,7 @@ groups:
       description: 'ディスクスペースが80%以上になり5分経過してます'
 ```
 
-### Alert Managerの設定
+### Alert Manager
 
 target file　:　/opt/prometheus/alertmanager-0.15.1.linux-amd64/alertmanager.yml
 ```
@@ -191,7 +191,7 @@ receivers:
 
 ```
 
-### Blackbox exporterの設定
+### Blackbox exporter
 
 target file　:　/opt/prometheus/blackbox_exporter-0.12.0.linux-amd64/blackbox.yml
 ```
