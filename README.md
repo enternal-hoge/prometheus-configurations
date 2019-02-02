@@ -1,13 +1,11 @@
 # prometheus-configurations
 Prometheus Configurations, alert manager, node exporter, blackbox exporter, etc..
 
-# Prometheus設定
+# Prometheus
 
 ## VM01
 
-### target file
-
-#### Prometheus Serverの設定
+### Prometheus Server
 
 target file　:　/opt/prometheus/prometheus-2.3.2.linux-amd64/prometheus.yml
 ```
@@ -72,7 +70,7 @@ scrape_configs:
         replacement: localhost:9101
 ```
 
-#### Alert Ruleの設定
+### Alert Ruleの設定
 
 target file　:　/opt/prometheus/prometheus-2.3.2.linux-amd64/alert_rules.yml
 ```
@@ -158,7 +156,7 @@ groups:
       description: 'ディスクスペースが80%以上になり5分経過してます'
 ```
 
-#### Alert Managerの設定
+### Alert Managerの設定
 
 target file　:　/opt/prometheus/alertmanager-0.15.1.linux-amd64/alertmanager.yml
 ```
@@ -193,7 +191,7 @@ receivers:
 
 ```
 
-#### Blackbox exporterの設定
+### Blackbox exporterの設定
 
 target file　:　/opt/prometheus/blackbox_exporter-0.12.0.linux-amd64/blackbox.yml
 ```
@@ -205,9 +203,9 @@ modules:
       method: GET
 ```
 
-### Systemd Unit Files
+## Systemd Unit Files
 
-#### Prometheus Server
+### Prometheus Server
 
 target file　:　/etc/systemd/system/prometheus.service
 ```
@@ -223,7 +221,7 @@ ExecStart=/opt/prometheus/prometheus-2.3.2.linux-amd64/prometheus --config.file=
 WantedBy=multi-user.target
 ```
 
-#### node exporter
+### node exporter
 
 target file　:　/etc/systemd/system/node_exporter.service
 ```
@@ -240,7 +238,7 @@ WantedBy=multi-user.target
 
 ```
 
-#### alert manager
+### alert manager
 
 /etc/systemd/system/alertmanager.service
 ```
@@ -271,9 +269,6 @@ WantedBy=multi-user.target
 ```
 
 ## VM02
-
-### target file
-node_exporterのみなのでなし。
 
 ### Systemd Unit File
 
